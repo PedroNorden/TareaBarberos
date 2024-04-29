@@ -59,7 +59,7 @@ def schedule_customer(shop, customer_id, delay):
     timer.start()
 
 def main():
-    num_waiting_chairs, num_barbers, _, customers = read_input_file(r'C:\Users\Estudiante\Downloads\file10.data')  # Use raw string
+    num_waiting_chairs, num_barbers, _, customers = read_input_file(r'Ejemplos/file0.data')  # Use raw string
     shop = BarberShop(num_barbers, num_waiting_chairs)
     barbers = [threading.Thread(target=shop.barber_works, args=(i,)) for i in range(num_barbers)]
     for barber in barbers:
